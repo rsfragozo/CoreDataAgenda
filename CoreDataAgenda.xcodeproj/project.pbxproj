@@ -13,6 +13,13 @@
 		F06322911C7438B200B9EE0E /* CoreDataAgenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F063228F1C7438B200B9EE0E /* CoreDataAgenda.xcdatamodeld */; };
 		F06322931C7438B200B9EE0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F06322921C7438B200B9EE0E /* Assets.xcassets */; };
 		F06322961C7438B200B9EE0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F06322941C7438B200B9EE0E /* LaunchScreen.storyboard */; };
+		F06322A91C743C0700B9EE0E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322A81C743C0700B9EE0E /* DataStore.swift */; };
+		F06322AE1C7443B200B9EE0E /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322AA1C7443B200B9EE0E /* Person+CoreDataProperties.swift */; };
+		F06322AF1C7443B200B9EE0E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322AB1C7443B200B9EE0E /* Person.swift */; };
+		F06322B01C7443B200B9EE0E /* Phone+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322AC1C7443B200B9EE0E /* Phone+CoreDataProperties.swift */; };
+		F06322B11C7443B200B9EE0E /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322AD1C7443B200B9EE0E /* Phone.swift */; };
+		F06322B31C744EAA00B9EE0E /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322B21C744EAA00B9EE0E /* EditContactViewController.swift */; };
+		F06322B51C74504600B9EE0E /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06322B41C74504600B9EE0E /* AddContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		F06322921C7438B200B9EE0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F06322951C7438B200B9EE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F06322971C7438B200B9EE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06322A81C743C0700B9EE0E /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		F06322AA1C7443B200B9EE0E /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F06322AB1C7443B200B9EE0E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F06322AC1C7443B200B9EE0E /* Phone+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Phone+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F06322AD1C7443B200B9EE0E /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
+		F06322B21C744EAA00B9EE0E /* EditContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		F06322B41C74504600B9EE0E /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,46 @@
 		F06322871C7438B200B9EE0E /* CoreDataAgenda */ = {
 			isa = PBXGroup;
 			children = (
+				F06322A71C743ABA00B9EE0E /* Model */,
+				F06322A51C743A9900B9EE0E /* Controller */,
+				F06322A61C743AA300B9EE0E /* View */,
+			);
+			path = CoreDataAgenda;
+			sourceTree = "<group>";
+		};
+		F06322A51C743A9900B9EE0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				F06322881C7438B200B9EE0E /* AppDelegate.swift */,
 				F063228A1C7438B200B9EE0E /* ViewController.swift */,
+				F06322B21C744EAA00B9EE0E /* EditContactViewController.swift */,
+				F06322B41C74504600B9EE0E /* AddContactViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F06322A61C743AA300B9EE0E /* View */ = {
+			isa = PBXGroup;
+			children = (
 				F063228C1C7438B200B9EE0E /* Main.storyboard */,
 				F06322921C7438B200B9EE0E /* Assets.xcassets */,
 				F06322941C7438B200B9EE0E /* LaunchScreen.storyboard */,
 				F06322971C7438B200B9EE0E /* Info.plist */,
-				F063228F1C7438B200B9EE0E /* CoreDataAgenda.xcdatamodeld */,
 			);
-			path = CoreDataAgenda;
+			name = View;
+			sourceTree = "<group>";
+		};
+		F06322A71C743ABA00B9EE0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F06322AA1C7443B200B9EE0E /* Person+CoreDataProperties.swift */,
+				F06322AB1C7443B200B9EE0E /* Person.swift */,
+				F06322AC1C7443B200B9EE0E /* Phone+CoreDataProperties.swift */,
+				F06322AD1C7443B200B9EE0E /* Phone.swift */,
+				F063228F1C7438B200B9EE0E /* CoreDataAgenda.xcdatamodeld */,
+				F06322A81C743C0700B9EE0E /* DataStore.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +144,7 @@
 				TargetAttributes = {
 					F06322841C7438B200B9EE0E = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -138,9 +184,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06322B11C7443B200B9EE0E /* Phone.swift in Sources */,
+				F06322AF1C7443B200B9EE0E /* Person.swift in Sources */,
+				F06322A91C743C0700B9EE0E /* DataStore.swift in Sources */,
+				F06322AE1C7443B200B9EE0E /* Person+CoreDataProperties.swift in Sources */,
 				F06322911C7438B200B9EE0E /* CoreDataAgenda.xcdatamodeld in Sources */,
+				F06322B51C74504600B9EE0E /* AddContactViewController.swift in Sources */,
+				F06322B31C744EAA00B9EE0E /* EditContactViewController.swift in Sources */,
 				F063228B1C7438B200B9EE0E /* ViewController.swift in Sources */,
 				F06322891C7438B200B9EE0E /* AppDelegate.swift in Sources */,
+				F06322B01C7443B200B9EE0E /* Phone+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +310,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.CoreDataAgenda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -268,6 +322,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.CoreDataAgenda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -290,6 +345,7 @@
 				F063229C1C7438B200B9EE0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
